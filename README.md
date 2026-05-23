@@ -1,6 +1,6 @@
 # agile development agent skills
 
-Portable AI coding agent skills for agile engineering practices: **refactoring**, **TDD**, **code review / PR workflows**, and **legacy-code change techniques**.
+Portable AI coding agent skills for agile engineering practices: **refactoring**, **TDD**, **code review / PR workflows**, **legacy-code change techniques**, and **DDD documentation**.
 
 These skills are extracted from [ai-code-interface.el](https://github.com/tninja/ai-code-interface.el) and `aider-legacy-code.el`, then adapted for AI coding CLIs and agents such as Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, and similar tools — no Emacs required.
 
@@ -14,6 +14,7 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 | [tdd](skills/tdd.md) | `/tdd` | Red-Green-Blue TDD cycle with strict stage separation and test-pattern detection |
 | [code-review](skills/code-review.md) | `/code-review` | PR review, creation, issue investigation, CI check analysis, merge conflict resolution |
 | [legacy-code](skills/legacy-code.md) | `/legacy-code` | Working Effectively with Legacy Code techniques for characterization tests, seams, dependency breaking, Sprout, Wrap, and Extract and Override workflows |
+| [derive-ddd-document](skills/derive-ddd-document.md) | `/derive-ddd-document` | Derive a Domain-Driven Design document from code, tests, schemas, APIs, and other project context |
 
 ## Installation
 
@@ -79,6 +80,14 @@ Or create a PR:
 /legacy-code
 > Goal: Add behavior safely to this hard-to-test module
 > Technique: Analyze Change Points, then Generate Characterization Tests
+```
+
+### Derive DDD Document
+
+```
+/derive-ddd-document
+> Target file: docs/domain-driven-design.md
+> Context: Derive the document from the current codebase, tests, schemas, and APIs
 ```
 
 ## License
