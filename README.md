@@ -11,7 +11,6 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 | Skill | Trigger | Description |
 |-------|---------|-------------|
 | [refactoring](skills/refactoring.md) | `/refactoring` | 60+ refactoring techniques from Martin Fowler's catalog with parameterized instructions |
-
 | [tdd](skills/tdd.md) | `/tdd` | Red-Green-Blue TDD cycle with strict stage separation and test-pattern detection |
 | [code-review](skills/code-review.md) | `/code-review` | PR review, creation, issue investigation, CI check analysis, merge conflict resolution |
 
