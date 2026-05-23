@@ -4,7 +4,7 @@ Standalone Claude Code skills for agile engineering practices: **refactoring**, 
 
 These skills are extracted from [ai-code-interface.el](https://github.com/tninja/ai-code-interface.el) and work with any Claude Code environment — no Emacs required.
 
-[Agile development](https://en.wikipedia.org/wiki/Agile_software_development) is an iterative approach to building software that emphasizes [short feedback loops](https://en.wikipedia.org/wiki/Feedback_loop), working software, [collaboration](https://en.wikipedia.org/wiki/Collaboration), and the ability to respond to change. Core practices commonly include [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), [continuous refactoring](https://en.wikipedia.org/wiki/Code_refactoring), [frequent code review](https://en.wikipedia.org/wiki/Code_review), [incremental delivery](https://en.wikipedia.org/wiki/Iterative_and_incremental_development), and close coordination between developers and stakeholders.
+[Agile development](https://en.wikipedia.org/wiki/Agile_software_development) is an iterative approach to building software that emphasizes short feedback loops, working software, collaboration, and the ability to respond to change. Core practices commonly include [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), [continuous refactoring](https://en.wikipedia.org/wiki/Code_refactoring), [frequent code review](https://en.wikipedia.org/wiki/Code_review), [incremental delivery](https://en.wikipedia.org/wiki/Iterative_and_incremental_development), and close coordination between developers and stakeholders.
 
 ## Skills
 
