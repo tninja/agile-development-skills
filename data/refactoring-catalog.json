@@ -1,0 +1,471 @@
+[
+  {
+    "name": "Suggest Refactoring Strategy",
+    "scopes": ["region", "global"],
+    "description": "Let the AI analyze the context and suggest the best refactoring technique."
+  },
+  {
+    "name": "Extract Method",
+    "scopes": ["region", "global"],
+    "description": "Extract the selected code into a new method named [METHOD_NAME]. Identify parameters and return values needed, and place the new method in an appropriate location.",
+    "parameters": [
+      { "placeholder": "[METHOD_NAME]", "prompt": "New method name" }
+    ]
+  },
+  {
+    "name": "Extract Variable",
+    "scopes": ["region", "global"],
+    "description": "Replace this complex expression with a well-named variable [VARIABLE_NAME]. Choose a name that clearly explains the expression's purpose.",
+    "parameters": [
+      { "placeholder": "[VARIABLE_NAME]", "prompt": "New variable name" }
+    ]
+  },
+  {
+    "name": "Extract Parameter",
+    "scopes": ["region", "global"],
+    "description": "Extract this expression into a new parameter named [PARAMETER_NAME] for the containing function. Update all call sites to pass this value as an argument.",
+    "parameters": [
+      { "placeholder": "[PARAMETER_NAME]", "prompt": "New parameter name" }
+    ]
+  },
+  {
+    "name": "Extract Field",
+    "scopes": ["region", "global"],
+    "description": "Extract this expression into a class field named [FIELD_NAME]. Initialize the field appropriately and replace the expression with a reference to the field.",
+    "parameters": [
+      { "placeholder": "[FIELD_NAME]", "prompt": "New field name" }
+    ]
+  },
+  {
+    "name": "Decompose Conditional",
+    "scopes": ["region", "global"],
+    "description": "Break down this complex conditional into smaller, more readable pieces. Extract conditions and branches into well-named methods that express the high-level logic."
+  },
+  {
+    "name": "Replace Nested Conditional with Guard Clauses",
+    "scopes": ["region", "global"],
+    "description": "Simplify nested conditional logic by using guard clauses. Check for edge cases or simple conditions first and return early."
+  },
+  {
+    "name": "Replace Magic Number with Symbolic Constant",
+    "scopes": ["region", "global"],
+    "description": "Replace the selected magic number or string literal with a well-named constant [CONSTANT_NAME]. Define the constant appropriately.",
+    "parameters": [
+      { "placeholder": "[CONSTANT_NAME]", "prompt": "Constant name" }
+    ]
+  },
+  {
+    "name": "Introduce Assertion",
+    "scopes": ["region", "global"],
+    "description": "Add an assertion to document an assumption about the program state. Specify the condition to assert [ASSERTION_CONDITION].",
+    "parameters": [
+      { "placeholder": "[ASSERTION_CONDITION]", "prompt": "Assertion condition" }
+    ]
+  },
+  {
+    "name": "Consolidate Conditional Expression",
+    "scopes": ["region", "global"],
+    "description": "Combine multiple conditional checks that lead to the same result into a single, clearer conditional expression."
+  },
+  {
+    "name": "Inline Method",
+    "scopes": ["region", "global"],
+    "description": "Replace calls to method [METHOD_NAME] with its body. Ensure the inlining doesn't change behavior or introduce bugs, and remove the original method if it's no longer needed.",
+    "parameters": [
+      { "placeholder": "[METHOD_NAME]", "prompt": "Method to inline" }
+    ]
+  },
+  {
+    "name": "Inline Variable",
+    "scopes": ["region", "global"],
+    "description": "Replace all references to variable [VARIABLE_NAME] with its value. Ensure the inlining doesn't change behavior or introduce bugs.",
+    "parameters": [
+      { "placeholder": "[VARIABLE_NAME]", "prompt": "Variable to inline" }
+    ]
+  },
+  {
+    "name": "Inline Temp",
+    "scopes": ["region", "global"],
+    "description": "Replace a temporary variable that is assigned once with its expression to simplify the code."
+  },
+  {
+    "name": "Replace Temp with Query",
+    "scopes": ["region", "global"],
+    "description": "Replace temporary variables that simply hold calculation results with self-explanatory query methods."
+  },
+  {
+    "name": "Introduce Explaining Variable",
+    "scopes": ["region", "global"],
+    "description": "Introduce a well-named variable to clarify a complex expression and improve readability."
+  },
+  {
+    "name": "Split Temporary Variable",
+    "scopes": ["region", "global"],
+    "description": "Split a temporary variable that is assigned multiple times into separate variables for each responsibility."
+  },
+  {
+    "name": "Remove Assignments to Parameters",
+    "scopes": ["region", "global"],
+    "description": "Avoid reassigning parameters inside a method; instead, use local variables to preserve intent."
+  },
+  {
+    "name": "Replace Method with Method Object",
+    "scopes": ["region", "global"],
+    "description": "Turn a complex method into its own object to break down temporary variables and simplify logic."
+  },
+  {
+    "name": "Substitute Algorithm",
+    "scopes": ["region", "global"],
+    "description": "Replace an existing algorithm with a clearer or more efficient one while keeping behavior intact."
+  },
+  {
+    "name": "Move Method",
+    "scopes": ["region", "global"],
+    "description": "Move method [METHOD_NAME] to class [TARGET_CLASS]. Update all references to use the new location and consider creating a delegation if needed.",
+    "parameters": [
+      { "placeholder": "[METHOD_NAME]", "prompt": "Method to move" },
+      { "placeholder": "[TARGET_CLASS]", "prompt": "Target class" }
+    ]
+  },
+  {
+    "name": "Move Field",
+    "scopes": ["region", "global"],
+    "description": "Relocate a field to the class that makes the most sense for ownership. Update access points and encapsulate if needed."
+  },
+  {
+    "name": "Extract Class",
+    "scopes": ["region", "global"],
+    "description": "Extract related fields and methods into a new class named [NEW_CLASS_NAME]. Update the original class to use the new class.",
+    "parameters": [
+      { "placeholder": "[NEW_CLASS_NAME]", "prompt": "New class name" }
+    ]
+  },
+  {
+    "name": "Inline Class",
+    "scopes": ["region", "global"],
+    "description": "Merge a class whose responsibilities are too small back into its parent, updating all references."
+  },
+  {
+    "name": "Hide Delegate",
+    "scopes": ["region", "global"],
+    "description": "Remove delegation leakage by adding wrapper methods so clients only talk to the main object."
+  },
+  {
+    "name": "Remove Middle Man",
+    "scopes": ["region", "global"],
+    "description": "Eliminate unnecessary delegation wrappers and let clients access the related object directly."
+  },
+  {
+    "name": "Introduce Foreign Method",
+    "scopes": ["region", "global"],
+    "description": "Add helper methods in client code when you cannot modify the server class to host the logic."
+  },
+  {
+    "name": "Introduce Local Extension",
+    "scopes": ["region", "global"],
+    "description": "Extend third-party classes locally via wrappers or subclasses to add behavior safely."
+  },
+  {
+    "name": "Encapsulate Field",
+    "scopes": ["region", "global"],
+    "description": "Make the field [FIELD_NAME] private and provide public getter and setter methods for access. Update all direct accesses to use these methods.",
+    "parameters": [
+      { "placeholder": "[FIELD_NAME]", "prompt": "Field to encapsulate" }
+    ]
+  },
+  {
+    "name": "Self Encapsulate Field",
+    "scopes": ["region", "global"],
+    "description": "Access a field through getter and setter methods even inside its own class to simplify future changes."
+  },
+  {
+    "name": "Replace Data Value with Object",
+    "scopes": ["region", "global"],
+    "description": "Turn a simple data value into a dedicated object to better express behavior and constraints."
+  },
+  {
+    "name": "Change Value to Reference",
+    "scopes": ["region", "global"],
+    "description": "Convert a value object into a shared reference when identity and shared state become important."
+  },
+  {
+    "name": "Change Reference to Value",
+    "scopes": ["region", "global"],
+    "description": "Convert a reference object into an immutable value when sharing state is unnecessary."
+  },
+  {
+    "name": "Replace Array with Object",
+    "scopes": ["region", "global"],
+    "description": "Replace arrays that mix different kinds of data with well-named objects and fields."
+  },
+  {
+    "name": "Duplicate Observed Data",
+    "scopes": ["region", "global"],
+    "description": "Maintain local copies of observed data so domain logic can work without tight coupling to the observer."
+  },
+  {
+    "name": "Change Unidirectional Association to Bidirectional",
+    "scopes": ["region", "global"],
+    "description": "Introduce links in both directions when objects need to navigate to each other."
+  },
+  {
+    "name": "Change Bidirectional Association to Unidirectional",
+    "scopes": ["region", "global"],
+    "description": "Remove unnecessary reverse links when only one-way navigation is required."
+  },
+  {
+    "name": "Encapsulate Collection",
+    "scopes": ["region", "global"],
+    "description": "Ensure collection fields return read-only views and expose modifier methods to protect invariants."
+  },
+  {
+    "name": "Replace Type Code with Class",
+    "scopes": ["region", "global"],
+    "description": "Replace primitive type codes with dedicated classes to capture behavior and validation."
+  },
+  {
+    "name": "Replace Type Code with Subclasses",
+    "scopes": ["region", "global"],
+    "description": "Substitute type codes with subclasses to leverage polymorphism for specialized behavior."
+  },
+  {
+    "name": "Replace Type Code with State/Strategy",
+    "scopes": ["region", "global"],
+    "description": "Transform a type code into State or Strategy objects to vary behavior dynamically."
+  },
+  {
+    "name": "Replace Subclass with Fields",
+    "scopes": ["region", "global"],
+    "description": "Flatten simple subclasses by replacing them with fields when inheritance no longer adds value."
+  },
+  {
+    "name": "Consolidate Duplicate Conditional Fragments",
+    "scopes": ["region", "global"],
+    "description": "Move repeated code inside conditionals to a single location executed in all paths."
+  },
+  {
+    "name": "Remove Control Flag",
+    "scopes": ["region", "global"],
+    "description": "Eliminate control flags by using return, break, or continue to control flow more directly."
+  },
+  {
+    "name": "Introduce Null Object",
+    "scopes": ["region", "global"],
+    "description": "Introduce a null object that encapsulates the default do-nothing behavior instead of handling null checks."
+  },
+  {
+    "name": "Rename Variable/Method",
+    "scopes": ["region", "global"],
+    "description": "Rename [CURRENT_NAME] to [NEW_NAME]. Ensure all references are updated consistently following naming conventions appropriate for this codebase.",
+    "parameters": [
+      { "placeholder": "[CURRENT_NAME]", "prompt": "Current name" },
+      { "placeholder": "[NEW_NAME]", "prompt": "New name" }
+    ]
+  },
+  {
+    "name": "Change Method Signature",
+    "scopes": ["region", "global"],
+    "description": "Update method [METHOD_NAME] signature to [NEW_SIGNATURE]. Adjust all call sites, documentation, and overloads to match the new contract.",
+    "parameters": [
+      { "placeholder": "[METHOD_NAME]", "prompt": "Method to change signature" },
+      { "placeholder": "[NEW_SIGNATURE]", "prompt": "Describe the new signature (parameters, return type, etc.)" }
+    ]
+  },
+  {
+    "name": "Introduce Constant",
+    "scopes": ["region", "global"],
+    "description": "Introduce a named constant [CONSTANT_NAME] for the selected literal or expression, choose the proper scope, and replace relevant usages.",
+    "parameters": [
+      { "placeholder": "[CONSTANT_NAME]", "prompt": "Constant name" }
+    ]
+  },
+  {
+    "name": "Introduce Field",
+    "scopes": ["region", "global"],
+    "description": "Promote the selected value to a class field named [FIELD_NAME], decide initialization timing, and replace repeated computations.",
+    "parameters": [
+      { "placeholder": "[FIELD_NAME]", "prompt": "Introduced field name" }
+    ]
+  },
+  {
+    "name": "Introduce Property",
+    "scopes": ["region", "global"],
+    "description": "Wrap field [FIELD_NAME] with a property named [PROPERTY_NAME], generating accessor logic that follows project conventions.",
+    "parameters": [
+      { "placeholder": "[FIELD_NAME]", "prompt": "Existing field to wrap" },
+      { "placeholder": "[PROPERTY_NAME]", "prompt": "Property name" }
+    ]
+  },
+  {
+    "name": "Safe Delete",
+    "scopes": ["region", "global"],
+    "description": "Remove [ELEMENT_NAME] only after verifying there are no remaining usages. Update dependent code or tests to keep the project consistent.",
+    "parameters": [
+      { "placeholder": "[ELEMENT_NAME]", "prompt": "Element to delete safely" }
+    ]
+  },
+  {
+    "name": "Convert Anonymous Class to Lambda",
+    "scopes": ["region", "global"],
+    "description": "Convert the selected anonymous class implementing [INTERFACE_NAME] into an equivalent lambda expression or method reference if the language supports it.",
+    "parameters": [
+      { "placeholder": "[INTERFACE_NAME]", "prompt": "Functional interface or delegate type" }
+    ]
+  },
+  {
+    "name": "Add Parameter",
+    "scopes": ["region", "global"],
+    "description": "Add a new parameter to a method to supply the data it actually needs, updating all callers."
+  },
+  {
+    "name": "Remove Parameter",
+    "scopes": ["region", "global"],
+    "description": "Eliminate a parameter that is no longer used and update all callers accordingly."
+  },
+  {
+    "name": "Separate Query from Modifier",
+    "scopes": ["region", "global"],
+    "description": "Split a method that both queries and alters state into two methods with single responsibilities."
+  },
+  {
+    "name": "Parameterize Method",
+    "scopes": ["region", "global"],
+    "description": "Turn similar methods that differ only in values into a single method that accepts parameters for the variation."
+  },
+  {
+    "name": "Replace Parameter with Explicit Methods",
+    "scopes": ["region", "global"],
+    "description": "Replace a parameter that selects different behaviors with explicitly named methods for each case."
+  },
+  {
+    "name": "Preserve Whole Object",
+    "scopes": ["region", "global"],
+    "description": "Pass the entire object to a method instead of individual fields so related data travels together."
+  },
+  {
+    "name": "Replace Parameter with Method",
+    "scopes": ["region", "global"],
+    "description": "Remove parameters that can be derived inside the method and call helper queries instead."
+  },
+  {
+    "name": "Introduce Parameter Object",
+    "scopes": ["region", "global"],
+    "description": "Replace these related parameters with a single parameter object named [OBJECT_NAME]. Create an appropriate class for the parameter object.",
+    "parameters": [
+      { "placeholder": "[OBJECT_NAME]", "prompt": "Parameter object name" }
+    ]
+  },
+  {
+    "name": "Remove Setting Method",
+    "scopes": ["region", "global"],
+    "description": "Eliminate setter methods for fields that should be immutable after construction."
+  },
+  {
+    "name": "Hide Method",
+    "scopes": ["region", "global"],
+    "description": "Reduce the visibility of methods that are only intended for internal use."
+  },
+  {
+    "name": "Replace Constructor with Factory Method",
+    "scopes": ["region", "global"],
+    "description": "Wrap object creation in a factory method when more descriptive names or varied creation logic is required."
+  },
+  {
+    "name": "Replace Error Code with Exception",
+    "scopes": ["region", "global"],
+    "description": "Throw an exception instead of returning an error code to signal failure states."
+  },
+  {
+    "name": "Replace Exception with Test",
+    "scopes": ["region", "global"],
+    "description": "Perform explicit checks before performing work to avoid using exceptions for normal control flow."
+  },
+  {
+    "name": "Pull Up Method",
+    "scopes": ["region", "global"],
+    "description": "Move method [METHOD_NAME] from the current class to its superclass [SUPERCLASS_NAME]. Ensure the method is applicable to the superclass context.",
+    "parameters": [
+      { "placeholder": "[METHOD_NAME]", "prompt": "Method to pull up" },
+      { "placeholder": "[SUPERCLASS_NAME]", "prompt": "Superclass name" }
+    ]
+  },
+  {
+    "name": "Pull Up Field",
+    "scopes": ["region", "global"],
+    "description": "Move common fields from subclasses into the superclass to centralize shared state."
+  },
+  {
+    "name": "Pull Up Constructor Body",
+    "scopes": ["region", "global"],
+    "description": "Move duplicated constructor logic from subclasses into the superclass constructor."
+  },
+  {
+    "name": "Push Down Method",
+    "scopes": ["region", "global"],
+    "description": "Move method [METHOD_NAME] from the current class to specific subclass(es) [SUBCLASS_NAMES] where it is actually used.",
+    "parameters": [
+      { "placeholder": "[METHOD_NAME]", "prompt": "Method to push down" },
+      { "placeholder": "[SUBCLASS_NAMES]", "prompt": "Comma-separated subclass names" }
+    ]
+  },
+  {
+    "name": "Push Down Field",
+    "scopes": ["region", "global"],
+    "description": "Move fields that are only used in some subclasses down into those specific subclasses."
+  },
+  {
+    "name": "Extract Subclass",
+    "scopes": ["region", "global"],
+    "description": "Create a new subclass when a class has behavior or data used only in some instances."
+  },
+  {
+    "name": "Extract Superclass",
+    "scopes": ["region", "global"],
+    "description": "Factor out common behavior or data into a new superclass shared by multiple classes."
+  },
+  {
+    "name": "Extract Interface",
+    "scopes": ["region", "global"],
+    "description": "Introduce an interface to capture common protocol without sharing implementation."
+  },
+  {
+    "name": "Collapse Hierarchy",
+    "scopes": ["region", "global"],
+    "description": "Flatten inheritance when subclass and superclass differ too little to justify separation."
+  },
+  {
+    "name": "Form Template Method",
+    "scopes": ["region", "global"],
+    "description": "Create a template method in a superclass to outline an algorithm while subclasses fill in the steps."
+  },
+  {
+    "name": "Replace Inheritance with Delegation",
+    "scopes": ["region", "global"],
+    "description": "Swap inheritance for delegation when only part of the behavior should be reused."
+  },
+  {
+    "name": "Replace Delegation with Inheritance",
+    "scopes": ["region", "global"],
+    "description": "Simplify a delegation chain by adopting inheritance when the relationship is truly is-a."
+  },
+  {
+    "name": "Tease Apart Inheritance",
+    "scopes": ["global"],
+    "description": "Separate intertwined inheritance hierarchies so each hierarchy represents a single responsibility."
+  },
+  {
+    "name": "Convert Procedural Design to Objects",
+    "scopes": ["global"],
+    "description": "Restructure procedural code into cohesive objects that encapsulate data and behavior."
+  },
+  {
+    "name": "Separate Domain from Presentation",
+    "scopes": ["global"],
+    "description": "Split domain logic from UI or presentation concerns to improve testability and reuse."
+  },
+  {
+    "name": "Extract Hierarchy",
+    "scopes": ["global"],
+    "description": "Introduce a new hierarchy to clarify different responsibilities and support future extension."
+  }
+]
