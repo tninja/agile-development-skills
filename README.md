@@ -11,44 +11,23 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 | Skill | Trigger | Description |
 |-------|---------|-------------|
 | [refactoring](skills/refactoring.md) | `/refactoring` | 60+ refactoring techniques from Martin Fowler's catalog with parameterized instructions |
+
 | [tdd](skills/tdd.md) | `/tdd` | Red-Green-Blue TDD cycle with strict stage separation and test-pattern detection |
 | [code-review](skills/code-review.md) | `/code-review` | PR review, creation, issue investigation, CI check analysis, merge conflict resolution |
 
 ## Installation
 
-### Claude Code Quick Install
+In your coding agent CLI session, just ask it to install skills with following prompt
 
-`install.sh` is a Claude Code installer. For other AI coding CLIs and agents, use the manual prompt workflow guidance below.
+Please read the README of https://github.com/tninja/agile-development-skills and install/setup the skills described there for <You Coding Agent>. Follow the installation instructions in the README.
 
-```bash
-./install.sh
-```
+You Coding Agent could be: Claude Code, Codex CLI, Github Copilot CLI, Gemini CLI, etc
 
-### Claude Code Manual Install
+## Uninstall
 
-Copy individual skills to your Claude Code skills directory:
+In your coding agent CLI session, just ask it to uninstall it
 
-```bash
-# All three skills
-cp skills/*.md ~/.claude/skills/
-
-# Or pick what you need
-cp skills/refactoring.md ~/.claude/skills/
-cp skills/tdd.md ~/.claude/skills/
-cp skills/code-review.md ~/.claude/skills/
-```
-
-### Claude Code Project-Level Install
-
-To make skills available only in a specific project:
-
-```bash
-cp skills/*.md /path/to/your/project/.claude/skills/
-```
-
-### Other AI Coding CLIs
-
-For other AI coding CLIs and agents, use the files in `skills/` as reusable prompt workflows. Copy the relevant skill content into your tool's custom instruction, prompt, slash-command, or project rules system, and keep the linked data files available when a skill references them. The provided installer does not configure these tools automatically.
+Please read the README of https://github.com/tninja/agile-development-skills and uninstall/remove the skills described there for <You Coding Agent>. Follow the repository instructions to remove any installed skill files and cleanup related configuration.
 
 ## Data Files
 
