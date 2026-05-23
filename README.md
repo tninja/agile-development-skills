@@ -1,8 +1,8 @@
-# ai-code-agile
+# agile development agent skills
 
-Standalone Claude Code skills for agile engineering practices: **refactoring**, **TDD**, and **code review / PR workflows**.
+Portable AI coding agent skills for agile engineering practices: **refactoring**, **TDD**, and **code review / PR workflows**.
 
-These skills are extracted from [ai-code-interface.el](https://github.com/tninja/ai-code-interface.el) and work with any Claude Code environment — no Emacs required.
+These skills are extracted from [ai-code-interface.el](https://github.com/tninja/ai-code-interface.el) and can be adapted for AI coding CLIs and agents such as Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, and similar tools — no Emacs required.
 
 [Agile development](https://en.wikipedia.org/wiki/Agile_software_development) is an iterative approach to building software that emphasizes short feedback loops, working software, collaboration, and the ability to respond to change. Core practices commonly include [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), [continuous refactoring](https://en.wikipedia.org/wiki/Code_refactoring), [frequent code review](https://en.wikipedia.org/wiki/Code_review), [incremental delivery](https://en.wikipedia.org/wiki/Iterative_and_incremental_development), and close coordination between developers and stakeholders.
 
@@ -16,13 +16,15 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 
 ## Installation
 
-### Quick Install (symlink to Claude Code skills directory)
+### Claude Code Quick Install
+
+`install.sh` is a Claude Code installer. For other AI coding CLIs and agents, use the manual prompt workflow guidance below.
 
 ```bash
 ./install.sh
 ```
 
-### Manual Install
+### Claude Code Manual Install
 
 Copy individual skills to your Claude Code skills directory:
 
@@ -36,13 +38,17 @@ cp skills/tdd.md ~/.claude/skills/
 cp skills/code-review.md ~/.claude/skills/
 ```
 
-### Project-Level Install
+### Claude Code Project-Level Install
 
 To make skills available only in a specific project:
 
 ```bash
 cp skills/*.md /path/to/your/project/.claude/skills/
 ```
+
+### Other AI Coding CLIs
+
+For other AI coding CLIs and agents, use the files in `skills/` as reusable prompt workflows. Copy the relevant skill content into your tool's custom instruction, prompt, slash-command, or project rules system, and keep the linked data files available when a skill references them. The provided installer does not configure these tools automatically.
 
 ## Data Files
 

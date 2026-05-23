@@ -1,5 +1,6 @@
 #!/bin/bash
-# Install ai-code-agile skills to Claude Code skills directory.
+# Claude Code installer for agile development agent skills.
+# Copies skills into the user or project Claude Code skills directory.
 # Usage: ./install.sh [--project /path/to/project]
 
 set -e
