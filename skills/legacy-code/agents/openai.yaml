@@ -1,4 +1,0 @@
-interface:
-  display_name: "Legacy Code"
-  short_description: "Legacy code change and testing techniques"
-  default_prompt: "Use $legacy-code to analyze this legacy code and suggest the safest change strategy."

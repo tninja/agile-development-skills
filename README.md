@@ -13,13 +13,13 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 | [refactoring](skills/refactoring.md) | `/refactoring` | 60+ refactoring techniques from Martin Fowler's catalog with parameterized instructions |
 | [tdd](skills/tdd.md) | `/tdd` | Red-Green-Blue TDD cycle with strict stage separation and test-pattern detection |
 | [code-review](skills/code-review.md) | `/code-review` | PR review, creation, issue investigation, CI check analysis, merge conflict resolution |
-| [legacy-code](skills/legacy-code/SKILL.md) | `/legacy-code` | Working Effectively with Legacy Code techniques for characterization tests, seams, dependency breaking, Sprout, Wrap, and Extract and Override workflows |
+| [legacy-code](skills/legacy-code.md) | `/legacy-code` | Working Effectively with Legacy Code techniques for characterization tests, seams, dependency breaking, Sprout, Wrap, and Extract and Override workflows |
 
 ## Installation
 
 In your coding agent CLI session, just ask it to install skills with following prompt
 
-Please read the README of https://github.com/tninja/agile-development-skills and install/setup the skills described there for <You Coding Agent>. Follow the installation instructions in the README.
+Please read the README of https://github.com/tninja/agile-development-skills and install/setup the skills described there for "Your Coding Agent". Follow the installation instructions in the README.
 
 You Coding Agent could be: Claude Code, Codex CLI, Github Copilot CLI, Gemini CLI, etc
 
@@ -27,7 +27,7 @@ You Coding Agent could be: Claude Code, Codex CLI, Github Copilot CLI, Gemini CL
 
 In your coding agent CLI session, just ask it to uninstall it
 
-Please read the README of https://github.com/tninja/agile-development-skills and uninstall/remove the skills described there for <You Coding Agent>. Follow the repository instructions to remove any installed skill files and cleanup related configuration.
+Please read the README of https://github.com/tninja/agile-development-skills and uninstall/remove the skills described there for "Your Coding Agent". Follow the repository instructions to remove any installed skill files and cleanup related configuration.
 
 ## Data Files
 
