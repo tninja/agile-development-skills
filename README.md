@@ -15,6 +15,7 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 | [code-review](skills/code-review.md) | `/code-review` | PR review, creation, issue investigation, CI check analysis, merge conflict resolution |
 | [legacy-code](skills/legacy-code.md) | `/legacy-code` | Working Effectively with Legacy Code techniques for characterization tests, seams, dependency breaking, Sprout, Wrap, and Extract and Override workflows |
 | [derive-ddd-document](skills/derive-ddd-document.md) | `/derive-ddd-document` | Derive a Domain-Driven Design document from code, tests, schemas, APIs, and other project context |
+| [follow-up-suggestions](skills/follow-up-suggestions.md) | `/follow-up-suggestions` | Auto suggest AI-actionable follow-up questions/tasks, allowing user to trigger them by number |
 
 ## Installation
 
@@ -88,6 +89,13 @@ Or create a PR:
 /derive-ddd-document
 > Target file: docs/domain-driven-design.md
 > Context: Derive the document from the current codebase, tests, schemas, and APIs
+```
+
+### Follow Up Suggestions
+
+```
+/follow-up-suggestions
+> This will enable auto-suggestion of next steps. Just reply with 1, 2, 3, etc. to trigger a suggestion.
 ```
 
 ## License
