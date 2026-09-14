@@ -1,6 +1,6 @@
 # agile development agent skills
 
-Portable AI coding agent skills for agile engineering practices: **refactoring**, **TDD**, **code review / PR workflows**, **legacy-code change techniques**, and **DDD documentation**.
+Portable AI coding agent skills for agile engineering practices: **incremental software growth**, **refactoring**, **TDD**, **code review / PR workflows**, **legacy-code change techniques**, and **DDD documentation**.
 
 These skills are extracted from [ai-code-interface.el](https://github.com/tninja/ai-code-interface.el) and `aider-legacy-code.el`, then adapted for AI coding CLIs and agents such as Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, and similar tools — no Emacs required.
 
@@ -10,6 +10,7 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 
 | Skill | Trigger | Description |
 |-------|---------|-------------|
+| [growing-software](skills/growing-software.md) | `/growing-software` | Choose one smallest valuable, human-verifiable grow step from current evidence instead of planning a speculative full roadmap |
 | [refactoring](skills/refactoring.md) | `/refactoring` | 60+ refactoring techniques from Martin Fowler's catalog with parameterized instructions |
 | [tdd](skills/tdd.md) | `/tdd` | Red-Green-Blue TDD cycle with strict stage separation and test-pattern detection |
 | [code-review](skills/code-review.md) | `/code-review` | PR review, creation, issue investigation, CI check analysis, merge conflict resolution |
@@ -36,6 +37,16 @@ Please read the README of https://github.com/tninja/agile-development-skills and
 - `data/refactoring-catalog.json` — Structured catalog of 60+ refactoring techniques with names, scopes, descriptions, and parameter definitions. Referenced by the refactoring skill.
 
 ## Usage Examples
+
+### Growing Software
+
+```
+/growing-software
+> Vision: Build an assistant that can diagnose common production pipeline failures.
+> Current capability: Given an item ID, retrieve its candidate status and score.
+```
+
+The skill proposes only the next smallest valuable grow, defines its scope and verification evidence, and waits for you to discuss, record, or implement it before going further.
 
 ### Refactoring
 
