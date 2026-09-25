@@ -1,6 +1,6 @@
 # agile development agent skills
 
-Portable AI coding agent skills for agile engineering practices: **incremental software growth**, **refactoring**, **TDD**, **code review / PR workflows**, **legacy-code change techniques**, and **DDD documentation**.
+Portable AI coding agent skills for agile engineering practices: **incremental software growth**, **refactoring**, **TDD**, **code review / PR workflows**, **legacy-code change techniques**, **value-driven simplification**, and **DDD documentation**.
 
 These skills are extracted from [ai-code-interface.el](https://github.com/tninja/ai-code-interface.el) and `aider-legacy-code.el`, then adapted for AI coding CLIs and agents such as Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, and similar tools — no Emacs required.
 
@@ -17,6 +17,7 @@ These skills are extracted from [ai-code-interface.el](https://github.com/tninja
 | [legacy-code](skills/legacy-code.md) | `/legacy-code` | Working Effectively with Legacy Code techniques for characterization tests, seams, dependency breaking, Sprout, Wrap, and Extract and Override workflows |
 | [derive-ddd-document](skills/derive-ddd-document.md) | `/derive-ddd-document` | Derive a Domain-Driven Design document from code, tests, schemas, APIs, and other project context |
 | [follow-up-suggestions](skills/follow-up-suggestions.md) | `/follow-up-suggestions` | Auto suggest AI-actionable follow-up questions/tasks, allowing user to trigger them by number |
+| [value-driven-simplification](skills/value-driven-simplification.md) | `/value-driven-simplification` | Human-led discussion to decide which complexity is worth keeping: investigate a branch diff or repo topic, ask one value question at a time, you decide what stays |
 
 ## Installation
 
@@ -108,6 +109,17 @@ Or create a PR:
 /follow-up-suggestions
 > This will enable auto-suggestion of next steps. Just reply with 1, 2, 3, etc. to trigger a suggestion.
 ```
+
+### Value-driven Simplification
+
+```
+/value-driven-simplification
+> Scope: Current Branch
+> Base: origin/main (confirmed)
+> Include uncommitted changes: no
+```
+
+The skill inspects the branch diff from the merge-base, identifies the consequential complexity with file/line evidence, then asks one question at a time about business value. You decide what to keep, simplify, or delete; it never edits code on its own.
 
 ## License
 
